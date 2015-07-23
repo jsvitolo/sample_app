@@ -12,6 +12,7 @@ gem 'sdoc',         '~> 0.4.0', group: :doc
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
+  gem 'pry-rails'
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
