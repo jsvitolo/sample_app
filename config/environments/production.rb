@@ -61,14 +61,15 @@ Rails.application.configure do
   # config.action_controller.asset_host = 'http://assets.example.com'
 
   # Ignore bad email addresses and do not raise email delivery errors.
-  # Set this to true and configure the email server for immediate delivery to raise delivery errors.
+  # Set this to true and configure the email server for immediate delivery to
+  # raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   host = 'jsvitolo-sample-app.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-    :addresses            => 'smtp.sendgrid.net',
+    :address              => 'smtp.sendgrid.net',
     :port                 => '587',
     :authentication       => :plain,
     :user_name            => ENV['SENDGRID_USERNAME'],
